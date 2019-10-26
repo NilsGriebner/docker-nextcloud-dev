@@ -64,7 +64,7 @@ services:
             - MYSQL_DATABASE=nextcloud
             - MYSQL_USER=nextcloud
             # comment if redis is disabled
-            - REDIS_HOST=redis
+            #- REDIS_HOST=redis
             - PHP_IDE_CONFIG='serverName=cli'
             # UNCOMMENT TO ENABLE XDEBUG: you need to replace the 192.168.1.123 ip 
             # by your static local ip and uncomment the following line
@@ -75,7 +75,7 @@ services:
             # use mysql instead of db if you disabled the db proxy
             - db
             # comment if redis is disabled
-            - redis
+            #- redis
         networks:
             - nextcloud
 
@@ -122,8 +122,8 @@ services:
     #         - nextcloud
 
     # COMMENT TO DISABLE REDIS
-    redis:
-        image: redis:latest
-        restart: always
-        networks:
-            - nextcloud
+    #redis:
+    #    image: redis:latest
+    #    restart: always
+    #    networks:
+    #        - nextcloud
